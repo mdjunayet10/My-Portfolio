@@ -1,72 +1,173 @@
-# Md Junayet Portfolio
+# My Portfolio
 
-Dark starry personal portfolio built with Next.js App Router, TypeScript, Tailwind CSS, and Firebase Hosting static export.
+A modern personal portfolio website for **Md Junayet**, built to showcase my skills, projects, academic background, resume, and contact information through a premium dark UI.
 
-## Run Locally
+## Live Website
+
+**Portfolio:**  
+https://md-junayet-portfolio.web.app/
+
+## About
+
+This portfolio highlights my work as a developer focused on building useful digital products across web, mobile, Firebase, full-stack, educational, productivity, and game development projects.
+
+The website includes a dark animated interface, smooth navigation, project showcases with screenshots, a tech stack section, resume page, and a working contact form.
+
+## Features
+
+- Premium dark UI design
+- Responsive layout for desktop, tablet, and mobile
+- Animated hero section with typing effect
+- Smooth page navigation
+- About section
+- Academic background section
+- Tech stack / skills section
+- Project showcase with real screenshots
+- Resume page with downloadable CV
+- Contact page with EmailJS integration
+- Firebase Hosting deployment
+- Custom favicon and browser title
+- Optimized static export with Next.js
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Firebase Hosting
+- EmailJS
+- Lucide React
+- React Icons
+
+## Featured Projects
+
+### Study Leveling App
+
+A study productivity and gamification app that turns learning into missions with XP, coins, levels, rewards, a global leaderboard, and multiplayer study rooms.
+
+**Live Demo:** https://study-leveling.web.app/
+
+### IslamQUIZ
+
+An Islamic educational quiz app designed to help users test and improve Islamic knowledge through structured questions, answers, and progress-based learning.
+
+**Live Demo:** https://islamquiz-app.web.app/
+
+### Career Bridge
+
+A Bangladesh-focused career platform connecting job seekers and employers through profiles, job listings, applications, and career-building features.
+
+### Savings Planner
+
+A savings and budgeting planner that helps users track savings goals, manage money plans, and organize financial progress clearly.
+
+### Hill Rider
+
+An original 2D hill-racing game with vehicle progression, driving physics, level objectives, coins, fuel, upgrades, and terrain challenges.
+
+## Project Structure
+
+```text
+Portfolio/
+├── public/
+│   ├── projects/
+│   └── resume/
+├── src/
+│   ├── app/
+│   ├── components/
+│   └── data/
+├── firebase.json
+├── next.config.ts
+├── package.json
+└── README.md
+```
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mdjunayet10/My-Portfolio.git
+cd My-Portfolio
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Run the development server:
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:3000`.
-
-## EmailJS Contact Form
-
-Create `.env.local` from `.env.example` before building if you want the contact form to send email:
+Open the local site:
 
 ```text
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+http://localhost:3000
 ```
 
-## Project Assets
+## Environment Variables
 
-Project preview assets live in:
+The contact form uses EmailJS. Create a `.env.local` file in the project root:
 
-```text
-public/projects/
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-Current expected filenames:
+Do not commit `.env.local` to GitHub.
 
-```text
-study-leveling-main.png
-islamquiz-main.png
-career-bridge-main.png
-savings-planner-main.png
-hill-rider-main.png
-```
+## Build
 
-If an asset is unavailable, the project card shows a polished dark fallback inside the image area.
-
-Resume file:
-
-```text
-public/resume/Md-Junayet-CV.pdf
-```
-
-## Build For Firebase Hosting
+Create a production build:
 
 ```bash
 npm run build
+```
+
+## Deploy to Firebase Hosting
+
+Deploy the site:
+
+```bash
 firebase deploy --only hosting:portfolio
 ```
 
-The static export is generated in `out`, and `firebase.json` already uses `out` as the hosting public directory.
+Or use the deploy script:
 
-## Edit Content
-
-Portfolio data is in:
-
-```text
-src/data/portfolio.ts
+```bash
+npm run deploy
 ```
 
-Portfolio content, links, academics, skills, and project data are managed there.
+## Important Security Notes
 
-## Notes
+Do not push private or secret files to GitHub.
 
-- Profile image uses `https://github.com/mdjunayet10.png`.
-- Do not commit secrets such as `.env`, service account keys, Firebase private keys, keystores, or signing keys.
+Never commit:
+
+```text
+.env.local
+serviceAccountKey.json
+*.jks
+*.keystore
+key.properties
+firebase-debug.log
+```
+
+## Contact
+
+- Email: mithu.bu.bd@gmail.com
+- GitHub: https://github.com/mdjunayet10
+- LinkedIn: https://www.linkedin.com/in/mdjunayet
+- Portfolio: https://md-junayet-portfolio.web.app/
+
+## License
+
+This project is licensed under the terms in the [LICENSE](LICENSE) file.
+
+The source code may be used for learning and reference, but the personal branding, text, images, screenshots, resume, and identity-related assets belong to **Md Junayet** and must not be reused as another person's portfolio.
